@@ -16,8 +16,15 @@ public class GameManager : MonoBehaviour {
     public AudioSource yellowRedLayer;
     public AudioSource redRedLayer;
 
+    public GameObject shipPrefab;
+
     void Awake () {
         Instance = this;
+    }
+
+    void Start()
+    {
+        CreateShip();
     }
 
 	void Update () {
@@ -25,11 +32,13 @@ public class GameManager : MonoBehaviour {
         GenerateWaves();
 
         // create ships
-        CreateShips();
+        //CreateShip();
     }
 
-    void CreateShips()
+    void CreateShip()
     {
+        Vector3 shipPos = new Vector3(0, 0, 0);
+        GameObject newShip = Instantiate(shipPrefab, shipPos, Quaternion.identity) as GameObject;
         // init a prefab ship with random ShipType
         // also random position from list
     }
