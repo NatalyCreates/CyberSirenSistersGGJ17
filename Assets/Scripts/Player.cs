@@ -1,3 +1,4 @@
+using System.Linq;
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -7,6 +8,7 @@ public class Player : MonoBehaviour
 
     List<float> samples;
     public KeyCode listenTo; // = KeyCode.Space;   // TODO make configurable
+    IEnumerable<double> windowed;
 
     public GameObject wavePrefab;
 
@@ -39,12 +41,14 @@ public class Player : MonoBehaviour
         if (index > -1) {
             samples.RemoveRange(0, index+1);
         }
+        windowed = samples.Select(time => GameBalance.Instance.WindowFn(Time.time - time));
     }
 
     public float GetCurrentFrequency()
     {
-        Debug.Log("Frequency = " + samples.Count / GameBalance.Instance.windowSeconds);
-        return (float)samples.Count / (float)GameBalance.Instance.windowSeconds;
+        float freq = (float)windowed.Sum() / (float)GameBalance.Instance.windowSeconds;
+        Debug.Log("Frequency = " + freq);
+        return freq;
     }
 
     public GameBalance.FreqColor GetCurrentWave()
@@ -55,7 +59,7 @@ public class Player : MonoBehaviour
         float freq = GetCurrentFrequency();
         for(int i=0; i<GameBalance.Instance.ColorThresholds.Length && i<GameBalance.Instance.freqColors.Length; i++)
         {
-            // Find the frequency 
+            // Find the frequency
             if(freq < GameBalance.Instance.ColorThresholds[i])
             {
                 return GameBalance.Instance.freqColors[i];

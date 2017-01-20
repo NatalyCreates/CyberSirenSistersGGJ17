@@ -1,3 +1,4 @@
+using System;
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -43,7 +44,7 @@ public class GameBalance : MonoBehaviour {
     void Awake () {
         Instance = this;
 
-        createWaveEveryXSec = 1f;
+        createWaveEveryXSec = 0.5f;
         windowSeconds = 1f;
 
         shipRateMin = 1f;
@@ -71,7 +72,7 @@ public class GameBalance : MonoBehaviour {
         frequencyThresholdsByColor[FreqColor.White] = 0f;
         frequencyThresholdsByColor[FreqColor.Blue] = 1f;
         frequencyThresholdsByColor[FreqColor.Yellow] = 2f;
-        frequencyThresholdsByColor[FreqColor.Red] = 3f;
+        frequencyThresholdsByColor[FreqColor.Red] = 4f;
     }
 
     public FreqColor GetColor(float freq)
@@ -92,5 +93,9 @@ public class GameBalance : MonoBehaviour {
         {
             return FreqColor.White;
         }
+    }
+
+    public double WindowFn(float timeDelta) {
+        return Math.Pow(Math.E, -timeDelta);
     }
 }

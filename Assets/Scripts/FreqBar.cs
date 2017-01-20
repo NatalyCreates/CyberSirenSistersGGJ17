@@ -21,7 +21,7 @@ public class FreqBar : MonoBehaviour {
 
         // change color to the color that corresponds to this frequency
         float freq = playerObj.GetComponent<Player>().GetCurrentFrequency();
-        image.fillAmount = freq / 10;
+        image.fillAmount = freq / 10f;
         text.text = "Current Freq: " + freq.ToString();
 	}
 }
