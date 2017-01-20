@@ -5,7 +5,7 @@ using UnityEngine;
 public class WaveBehavior : MonoBehaviour {
 
     public GameBalance.FreqColor waveColor;
-    public float destroyTime = 20.0f;
+    float destroyTime = 15.0f;
     public float xSpeed, ySpeed;
     public enum Side { Left, Right };
 

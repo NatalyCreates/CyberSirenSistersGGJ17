@@ -28,6 +28,9 @@ public class GameBalance : MonoBehaviour {
     public float shipRateMin, shipRateMax;
     public int shipMinXPos, shipMaxXPos;
 
+    public double raiseLambda;
+    public double decayLambda;
+
     public struct FreqRange
     {
         public FreqRange(float startF, float endF)
@@ -46,6 +49,8 @@ public class GameBalance : MonoBehaviour {
 
         createWaveEveryXSec = 0.5f;
         windowSeconds = 1f;
+        raiseLambda = 8.0;
+        decayLambda = 1.0f;
 
         shipRateMin = 1f;
         shipRateMax = 5f;
@@ -96,6 +101,7 @@ public class GameBalance : MonoBehaviour {
     }
 
     public double WindowFn(float timeDelta) {
-        return Math.Pow(Math.E, -timeDelta);
+        return Math.E * (1 - Math.Pow(Math.E, -raiseLambda * timeDelta))
+            * Math.Pow(Math.E, -decayLambda * timeDelta);
     }
 }

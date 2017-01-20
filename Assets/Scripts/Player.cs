@@ -29,7 +29,7 @@ public class Player : MonoBehaviour
     void CreateWave()
     {
         GameBalance.FreqColor color = GetCurrentWave();
-        Debug.Log("Creating wave - " + color.ToString());
+        //Debug.Log("Creating wave - " + color.ToString());
         GameObject wave = Instantiate(wavePrefab, this.transform.position, Quaternion.identity);
         wave.GetComponent<WaveBehavior>().waveColor = color;
     }
@@ -49,7 +49,6 @@ public class Player : MonoBehaviour
     public float GetCurrentFrequency()
     {
         float freq = (float)windowed.Sum() / (float)GameBalance.Instance.windowSeconds;
-        Debug.Log("Frequency = " + freq);
         return freq;
     }
 
