@@ -22,6 +22,7 @@ GameObject:
   - component: {fileID: 212236220423362828}
   - component: {fileID: 114108258419725516}
   - component: {fileID: 50517883179557110}
+  - component: {fileID: 58167720203390426}
   m_Layer: 0
   m_Name: WaveSliceRight
   m_TagString: waveRight
@@ -62,6 +63,20 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 0
+--- !u!58 &58167720203390426
+CircleCollider2D:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1758652162156472}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_Offset: {x: 2210.5, y: -2210.5}
+  serializedVersion: 2
+  m_Radius: 2210.5
 --- !u!114 &114108258419725516
 MonoBehaviour:
   m_ObjectHideFlags: 1
