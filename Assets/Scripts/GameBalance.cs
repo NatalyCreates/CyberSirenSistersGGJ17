@@ -1,4 +1,4 @@
-using System;
+﻿using System;
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -27,6 +27,7 @@ public class GameBalance : MonoBehaviour {
 
     public float shipRateMin, shipRateMax;
     public int shipMinXPos, shipMaxXPos;
+    public float shipMinSpeed, shipMaxSpeed;
 
     public double raiseLambda;
     public double decayLambda;
@@ -57,6 +58,9 @@ public class GameBalance : MonoBehaviour {
 
         shipMinXPos = -1000;
         shipMaxXPos = 1000;
+
+        shipMinSpeed = 25;
+        shipMaxSpeed = 75;
 
         /*
         possibleShipStartPosX = new List<float>();

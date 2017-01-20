@@ -16,7 +16,8 @@ public class BoatBehavior : MonoBehaviour {
 
 	void Update () {
         // move
-        gameObject.GetComponent<Rigidbody2D>().velocity = new Vector2(0, -50);
+        float speed = Random.Range(GameBalance.Instance.shipMinSpeed, GameBalance.Instance.shipMaxSpeed);
+        gameObject.GetComponent<Rigidbody2D>().velocity = new Vector2(0, -1*speed);
 
         // hit points? later
 
