@@ -24,6 +24,8 @@ public class GameBalance : MonoBehaviour {
 
     public float createWaveEveryXSec;
 
+    public float shipRateMin, shipRateMax;
+
     public struct FreqRange
     {
         public FreqRange(float startF, float endF)
@@ -42,6 +44,9 @@ public class GameBalance : MonoBehaviour {
 
         createWaveEveryXSec = 1f;
         windowSeconds = 1f;
+
+        shipRateMin = 1f;
+        shipRateMax = 5f;
 
         possibleShipStartPosX = new List<float>();
         possibleShipStartPosX.Add(200);

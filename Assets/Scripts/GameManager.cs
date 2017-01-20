@@ -22,13 +22,14 @@ public class GameManager : MonoBehaviour {
 
     public GameObject shipPrefab;
 
+    private Random rand = new Random();
     void Awake () {
         Instance = this;
     }
 
     void Start()
     {
-        CreateShip();
+        CreateShipLoop();
     }
 
 	void Update () {
@@ -39,9 +40,16 @@ public class GameManager : MonoBehaviour {
         //CreateShip();
     }
 
+    void CreateShipLoop()
+    {
+        CreateShip();
+        Invoke("CreateShipLoop", Random.Range(GameBalance.Instance.shipRateMin, GameBalance.Instance.shipRateMax));
+    }
+
     void CreateShip()
     {
-        Vector3 shipPos = new Vector3(0, 0, 0);
+        int rndPos = Random.Range(0, GameBalance.Instance.possibleShipStartPosX.Count);
+        Vector3 shipPos = new Vector3(GameBalance.Instance.possibleShipStartPosX[rndPos], 0, 0);
         GameObject newShip = Instantiate(shipPrefab, shipPos, Quaternion.identity) as GameObject;
         // init a prefab ship with random ShipType
         // also random position from list
