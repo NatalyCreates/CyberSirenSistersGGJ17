@@ -7,12 +7,10 @@ public class FreqBar : MonoBehaviour {
 
     public GameBalance.PlayerType player;
     public GameObject playerObj;
-    Text text;
     Image image;
 
 	void Start () {
         playerObj = GameManager.Instance.playerLeft;
-        text = GetComponentsInChildren<Text>()[0];
         image = GetComponentsInChildren<Image>()[0];
 	}
 
@@ -22,6 +20,5 @@ public class FreqBar : MonoBehaviour {
         // change color to the color that corresponds to this frequency
         float freq = playerObj.GetComponent<Player>().GetCurrentFrequency();
         image.fillAmount = freq / 10f;
-        text.text = "Current Freq: " + freq.ToString();
 	}
 }
