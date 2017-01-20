@@ -6,7 +6,7 @@ public class Player : MonoBehaviour
 {
 
     List<float> samples;
-    KeyCode listenTo = KeyCode.LeftShift;   // TODO make configurable
+    KeyCode listenTo = KeyCode.Space;   // TODO make configurable
 
     public GameObject wavePrefab;
 
@@ -14,7 +14,7 @@ public class Player : MonoBehaviour
     {
         samples = new List<float>();
 
-        InvokeRepeating("CreateWave", 1, 1);//GameBalance.Instance.createWaveEveryXSec, GameBalance.Instance.createWaveEveryXSec);
+        InvokeRepeating("CreateWave", GameBalance.Instance.createWaveEveryXSec, GameBalance.Instance.createWaveEveryXSec);
     }
 
     void Update()
@@ -24,10 +24,10 @@ public class Player : MonoBehaviour
 
     void CreateWave()
     {
-        //Debug.Log("Creating wave - " + GetCurrentWave().ToString());
-        Debug.Log("Creating wave");
+        GameBalance.FreqColor color = GetCurrentWave();
+        Debug.Log("Creating wave - " + color.ToString());
         GameObject wave = Instantiate(wavePrefab, this.transform.position, Quaternion.identity);
-        wave.GetComponent<Rigidbody>().velocity = new Vector3(1, 1, 1);
+        wave.GetComponent<WaveBehavior>().waveColor = color;
     }
 
     private void UpdateArray(bool isClick)
@@ -48,7 +48,8 @@ public class Player : MonoBehaviour
 
     public GameBalance.FreqColor GetCurrentWave()
     {
-//        return GameBalance.
+        return GameBalance.Instance.GetColor(GetCurrentFrequency());
+        /*
         GameBalance.Instance.ColorThresholds[0] = 1.0f;
         float freq = GetCurrentFrequency();
         for(int i=0; i<GameBalance.Instance.ColorThresholds.Length && i<GameBalance.Instance.freqColors.Length; i++)
@@ -61,6 +62,7 @@ public class Player : MonoBehaviour
         }
         // Return the last color
         return GameBalance.Instance.freqColors[GameBalance.Instance.freqColors.Length - 1];
+        */
     }
     // animate siren sprite
 }
