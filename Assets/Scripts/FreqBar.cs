@@ -23,6 +23,5 @@ public class FreqBar : MonoBehaviour {
         float freq = playerObj.GetComponent<Player>().GetCurrentFrequency();
         image.fillAmount = freq / 10;
         text.text = "Current Freq: " + freq.ToString();
-        Debug.Log("Current Freq: " + freq.ToString());
 	}
 }

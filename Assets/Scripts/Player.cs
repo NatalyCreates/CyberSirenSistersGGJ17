@@ -6,7 +6,7 @@ public class Player : MonoBehaviour
 {
 
     List<float> samples;
-    KeyCode listenTo = KeyCode.Space;   // TODO make configurable
+    public KeyCode listenTo; // = KeyCode.Space;   // TODO make configurable
 
     public GameObject wavePrefab;
 

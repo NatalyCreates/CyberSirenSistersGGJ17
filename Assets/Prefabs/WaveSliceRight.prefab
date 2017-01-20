@@ -89,8 +89,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   waveColor: 0
-  xSpeed: 0
-  ySpeed: 0
+  xSpeed: -200
+  ySpeed: 200
   side: 0
 --- !u!212 &212236220423362828
 SpriteRenderer:

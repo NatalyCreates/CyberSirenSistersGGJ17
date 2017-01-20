@@ -5,6 +5,7 @@ using UnityEngine;
 public class WaveBehavior : MonoBehaviour {
 
     public GameBalance.FreqColor waveColor;
+    public float destroyTime = 5.0f;
     public float xSpeed, ySpeed;
     public enum Side { Left, Right };
 
@@ -36,9 +37,6 @@ public class WaveBehavior : MonoBehaviour {
 	}
 
 	void Update () {
-		// move at a certain pace
-
-
-        // has collider and tagged as wave
-	}
+        Destroy(gameObject, destroyTime);
+    }
 }
