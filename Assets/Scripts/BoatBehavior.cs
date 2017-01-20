@@ -48,6 +48,7 @@ public class BoatBehavior : MonoBehaviour {
             if (other.GetComponent<WaveBehavior>().waveColor == rightSideColor)
             {
                 rightSideHit = true;
+                Debug.Log("rightSideColor = waveColor = " + rightSideColor);
             }
             else
             {
@@ -59,6 +60,7 @@ public class BoatBehavior : MonoBehaviour {
             if (other.GetComponent<WaveBehavior>().waveColor == leftSideColor)
             {
                 leftSideHit = true;
+                Debug.Log("leftSideColor = waveColor = " + leftSideColor);
             }
             else
             {

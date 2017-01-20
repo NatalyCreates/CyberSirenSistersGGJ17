@@ -10,7 +10,11 @@ public class FreqBar : MonoBehaviour {
     Image image;
 
 	void Start () {
-        playerObj = GameManager.Instance.playerLeft;
+        if (player == GameBalance.PlayerType.Left) {
+            playerObj = GameManager.Instance.playerLeft;
+        } else {
+            playerObj = GameManager.Instance.playerRight;
+        }
         image = GetComponentsInChildren<Image>()[0];
 	}
 
