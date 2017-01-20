@@ -67,7 +67,7 @@ public class GameManager : MonoBehaviour {
 
 
 
-        newShip.GetComponent<SpriteRenderer>().color = GameBalance.Instance.actualColors[newShip.GetComponent<BoatBehavior>().leftSideColor];
+        //newShip.GetComponent<SpriteRenderer>().color = GameBalance.Instance.actualColors[newShip.GetComponent<BoatBehavior>().leftSideColor];
 
     }
 

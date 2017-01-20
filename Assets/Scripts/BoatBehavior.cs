@@ -22,7 +22,7 @@ public class BoatBehavior : MonoBehaviour {
 
         // has collider
 
-        if (rightSideHit || leftSideHit)
+        if (rightSideHit && leftSideHit)
         {
             // ship is hit!
             // sink
@@ -48,6 +48,11 @@ public class BoatBehavior : MonoBehaviour {
             if (other.GetComponent<WaveBehavior>().waveColor == rightSideColor)
             {
                 rightSideHit = true;
+                Debug.Log("rightSideColor = waveColor = " + rightSideColor);
+            }
+            else
+            {
+                rightSideHit = false;
             }
         }
         if (other.tag == "waveLeft")
@@ -55,6 +60,11 @@ public class BoatBehavior : MonoBehaviour {
             if (other.GetComponent<WaveBehavior>().waveColor == leftSideColor)
             {
                 leftSideHit = true;
+                Debug.Log("leftSideColor = waveColor = " + leftSideColor);
+            }
+            else
+            {
+                leftSideHit = false;
             }
         }
         if (other.tag == "beach")
