@@ -89,6 +89,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   waveColor: 0
+  destroyTime: 20
   xSpeed: 200
   ySpeed: 200
   side: 0
