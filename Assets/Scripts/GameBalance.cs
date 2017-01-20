@@ -18,6 +18,8 @@ public class GameBalance : MonoBehaviour {
 
     public List<float> possibleShipStartPosX;
 
+    public float windowSeconds;
+
     public struct FreqRange
     {
         public FreqRange(float startF, float endF)
