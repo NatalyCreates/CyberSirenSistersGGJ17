@@ -9,15 +9,30 @@ public class GameManager : MonoBehaviour {
     public GameObject playerLeft;
     public GameObject playerRight;
 
+    public AudioSource baseMusic;
+    public AudioSource blueBlueLayer;
+    public AudioSource blueYellowLayer;
+    public AudioSource yellowYellowLayer;
+    public AudioSource yellowRedLayer;
+    public AudioSource redRedLayer;
+
     void Awake () {
         Instance = this;
     }
 
 	void Update () {
-		// call gen waves at a certain rate (every 0.5 sec?)
-        
+        // call gen waves at a certain rate (every 0.5 sec?)
+        GenerateWaves();
 
-	}
+        // create ships
+        CreateShips();
+    }
+
+    void CreateShips()
+    {
+        // init a prefab ship with random ShipType
+        // also random position from list
+    }
 
     void GenerateWaves()
     {
@@ -26,7 +41,7 @@ public class GameManager : MonoBehaviour {
         float leftFreq = playerLeft.GetComponent<Player>().GetCurrentFrequency();
         float rightFreq = playerRight.GetComponent<Player>().GetCurrentFrequency();
 
-        //GameBalance.Instance.GetColor(leftFreq);
+        GameBalance.FreqColor leftColor = GameBalance.Instance.GetColor(leftFreq);
         
         // create a wave object with the color of that freq in the right/left corner
 
@@ -34,16 +49,17 @@ public class GameManager : MonoBehaviour {
 
     void ManageMusic(float leftFreq, float rightFreq)
     {
-        //GameBalance.Instance.frequencyRangesByColor[];
+
+        // music
+
         GameBalance.FreqColor color1 = GameBalance.Instance.GetColor(leftFreq);
         GameBalance.FreqColor color2 = GameBalance.Instance.GetColor(rightFreq);
-
-
+        
         GameBalance.FreqColor[] coloredPair = GetOrderedColorPair(color1, color2);
 
         if (coloredPair[0] == GameBalance.FreqColor.White)
         {
-            // base sound
+            baseMusic.volume = 1f;
         }
         else if (coloredPair[0] == GameBalance.FreqColor.Blue)
         {

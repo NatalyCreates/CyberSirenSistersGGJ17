@@ -4,15 +4,19 @@ using UnityEngine;
 
 public class GameBalance : MonoBehaviour {
 
-
-
     public static GameBalance Instance;
 
-    public enum FreqColor { White, Red, Yellow, Blue };
+    public enum PlayerType { Left, Right };
+
+    public enum ShipType { BlueBlue, BlueYellow, BlueRed, YellowBlue, YellowYellow, YellowRed, RedBlue, RedYellow, RedRed };
+
+    public enum FreqColor { White, Blue, Yellow, Red };
 
     public FreqColor[] freqColors;
 
     public Dictionary<FreqColor, Color> actualColors;
+
+    public List<float> possibleShipStartPosX;
 
     public struct FreqRange
     {
@@ -30,11 +34,18 @@ public class GameBalance : MonoBehaviour {
     void Awake () {
         Instance = this;
 
+        possibleShipStartPosX = new List<float>();
+        possibleShipStartPosX.Add(200);
+        possibleShipStartPosX.Add(400);
+        possibleShipStartPosX.Add(600);
+        possibleShipStartPosX.Add(800);
+        possibleShipStartPosX.Add(1000);
+
         actualColors = new Dictionary<FreqColor, Color>();
         actualColors[FreqColor.White] = new Color(255, 255, 255);
-        actualColors[FreqColor.Red] = new Color(255, 0, 0);
-        actualColors[FreqColor.Yellow] = new Color(0, 255, 0);
         actualColors[FreqColor.Blue] = new Color(0, 0, 255);
+        actualColors[FreqColor.Yellow] = new Color(0, 255, 0);
+        actualColors[FreqColor.Red] = new Color(255, 0, 0);
 
         frequencyRangesByColor = new Dictionary<FreqColor, FreqRange>();
         frequencyRangesByColor[FreqColor.White] = new FreqRange(0f, 0.5f);

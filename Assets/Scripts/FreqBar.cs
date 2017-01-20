@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class FreqBar : MonoBehaviour {
 
-    public int playerNum;
+    public GameBalance.PlayerType player;
 
 	void Start () {
 		
@@ -12,6 +12,7 @@ public class FreqBar : MonoBehaviour {
 
 	void Update () {
 		// get the current frequency of this player and display that % of the bar
+
         // change color to the color that corresponds to this frequency
 	}
 }
