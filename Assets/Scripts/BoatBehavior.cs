@@ -15,8 +15,9 @@ public class BoatBehavior : MonoBehaviour {
 	}
 
 	void Update () {
-		// move
-        
+        // move
+        gameObject.GetComponent<Rigidbody2D>().velocity = new Vector2(0, -50);
+
         // hit points? later
 
         // has collider
