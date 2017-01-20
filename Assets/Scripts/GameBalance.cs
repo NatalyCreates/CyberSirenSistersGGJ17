@@ -55,9 +55,9 @@ public class GameBalance : MonoBehaviour {
 
         frequencyThresholdsByColor = new Dictionary<FreqColor, float>();
         frequencyThresholdsByColor[FreqColor.White] = 0f;
-        frequencyThresholdsByColor[FreqColor.Blue] = 0.5f;
-        frequencyThresholdsByColor[FreqColor.Yellow] = 1f;
-        frequencyThresholdsByColor[FreqColor.Red] = 2f;
+        frequencyThresholdsByColor[FreqColor.Blue] = 1f;
+        frequencyThresholdsByColor[FreqColor.Yellow] = 2f;
+        frequencyThresholdsByColor[FreqColor.Red] = 3f;
     }
 
     public FreqColor GetColor(float freq)

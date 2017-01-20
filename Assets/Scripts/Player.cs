@@ -37,13 +37,14 @@ public class Player : MonoBehaviour
         }
         int index = samples.FindIndex(time => time < (Time.time - GameBalance.Instance.windowSeconds));
         if (index > -1) {
-            samples.RemoveRange(0, index);
+            samples.RemoveRange(0, index+1);
         }
     }
 
     public float GetCurrentFrequency()
     {
-        return samples.Count / GameBalance.Instance.windowSeconds;
+        Debug.Log("Frequency = " + samples.Count / GameBalance.Instance.windowSeconds);
+        return (float)samples.Count / (float)GameBalance.Instance.windowSeconds;
     }
 
     public GameBalance.FreqColor GetCurrentWave()
