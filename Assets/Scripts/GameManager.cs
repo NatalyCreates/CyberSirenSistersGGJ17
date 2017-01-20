@@ -37,8 +37,9 @@ public class GameManager : MonoBehaviour {
 
     void CreateShip()
     {
-        int rndPos = Random.Range(0, GameBalance.Instance.possibleShipStartPosX.Count);
-        Vector3 shipPos = new Vector3(GameBalance.Instance.possibleShipStartPosX[rndPos], 200, 0);
+        //int rndPos = Random.Range(0, GameBalance.Instance.possibleShipStartPosX.Count);
+        //Vector3 shipPos = new Vector3(GameBalance.Instance.possibleShipStartPosX[rndPos], 200, 0);
+        Vector3 shipPos = new Vector3(Random.Range(GameBalance.Instance.shipMinXPos, GameBalance.Instance.shipMaxXPos), 500, 0);
         GameObject newShip = Instantiate(shipPrefab, shipPos, Quaternion.identity) as GameObject;
         // init a prefab ship with random ShipType
         // also random position from list

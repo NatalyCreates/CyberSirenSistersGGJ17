@@ -25,6 +25,7 @@ public class GameBalance : MonoBehaviour {
     public float createWaveEveryXSec;
 
     public float shipRateMin, shipRateMax;
+    public int shipMinXPos, shipMaxXPos;
 
     public struct FreqRange
     {
@@ -48,12 +49,17 @@ public class GameBalance : MonoBehaviour {
         shipRateMin = 1f;
         shipRateMax = 5f;
 
+        shipMinXPos = -1000;
+        shipMaxXPos = 1000;
+
+        /*
         possibleShipStartPosX = new List<float>();
         possibleShipStartPosX.Add(200);
         possibleShipStartPosX.Add(400);
         possibleShipStartPosX.Add(600);
         possibleShipStartPosX.Add(800);
         possibleShipStartPosX.Add(1000);
+        */
 
         actualColors = new Dictionary<FreqColor, Color>();
         actualColors[FreqColor.White] = new Color(255, 255, 255);
