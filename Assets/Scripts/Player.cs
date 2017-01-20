@@ -15,11 +15,14 @@ public class Player : MonoBehaviour {
       UpdateArray(Input.GetKeyDown(listenTo))
   }
 
-  private void UpdateArray(isClick) {
+  private void UpdateArray(bool isClick) {
       if (isClick) {
           samples.Add(Time.time);
       }
-      samples.RemoveWhere(time => time < (Time.time - GameBalance.Instance.windowSeconds)
+      var index = samples.FindIndex(time => time < (Time.time - GameBalance.Instance.windowSeconds)
+      if (index > -1) {
+          samples.RemoveRange(0, index)
+      }
   }
 
   public float GetCurrentFrequency()
