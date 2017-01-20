@@ -60,7 +60,21 @@ public class GameBalance : MonoBehaviour {
 
     public FreqColor GetColor(float freq)
     {
-        
-        return FreqColor.Red;
+        if (freq >= frequencyThresholdsByColor[FreqColor.Red])
+        {
+            return FreqColor.Red;
+        }
+        else if (freq >= frequencyThresholdsByColor[FreqColor.Yellow])
+        {
+            return FreqColor.Yellow;
+        }
+        else if (freq >= frequencyThresholdsByColor[FreqColor.Blue])
+        {
+            return FreqColor.Blue;
+        }
+        else
+        {
+            return FreqColor.White;
+        }
     }
 }
