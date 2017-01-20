@@ -22,6 +22,8 @@ public class GameBalance : MonoBehaviour {
 
     public float windowSeconds;
 
+    public float createWaveEveryXSec;
+
     public struct FreqRange
     {
         public FreqRange(float startF, float endF)
