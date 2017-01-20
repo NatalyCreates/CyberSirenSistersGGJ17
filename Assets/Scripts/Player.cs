@@ -1,4 +1,4 @@
-using System.Linq;
+﻿using System.Linq;
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -15,6 +15,8 @@ public class Player : MonoBehaviour
     void Start()
     {
         samples = new List<float>();
+
+        UpdateArray(Input.GetKeyDown(listenTo));
 
         InvokeRepeating("CreateWave", GameBalance.Instance.createWaveEveryXSec, GameBalance.Instance.createWaveEveryXSec);
     }
