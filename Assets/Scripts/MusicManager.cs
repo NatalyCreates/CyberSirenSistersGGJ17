@@ -4,23 +4,20 @@ using UnityEngine;
 
 public class MusicManager : MonoBehaviour {
 
-
-    public AudioClip baseLayer;
-    public AudioClip baseLayerWaves;
-    public AudioClip layer1;
-    public AudioClip layer2;
-    public AudioClip layer3a;
-    public AudioClip layer3b;
-    public AudioClip layer4;
-    public AudioClip layer5;
-    public AudioClip layer6;
-    public AudioClip layer7;
-
     void Start()
     {
 
         AudioSource[] sources = gameObject.GetComponentsInChildren<AudioSource>();
-        Debug.Log(sources.ToString());
+        Debug.Log(sources.Length.ToString());
+        foreach (AudioSource s in sources)
+        {
+            Debug.Log(s.name);
+            s.volume = 1f;
+        }
+
+        sources[0].volume = 1f;
+        sources[1].volume = 1f;
+
 
         //gameObject.GetComponent<AudioSource>();
         //AudioSource baseLayerClip = gameObject.AddComponent(AudioSource);
