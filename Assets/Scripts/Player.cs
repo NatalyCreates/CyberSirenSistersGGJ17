@@ -2,17 +2,32 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Player : MonoBehaviour {
+public class Player : MonoBehaviour
+{
 
     List<float> samples;
     KeyCode listenTo = KeyCode.LeftShift;   // TODO make configurable
 
-	void Start () {
+    public GameObject wavePrefab;
+
+    void Start()
+    {
         samples = new List<float>();
+
+        InvokeRepeating("CreateWave", 1, 1);//GameBalance.Instance.createWaveEveryXSec, GameBalance.Instance.createWaveEveryXSec);
     }
 
-	void Update () {
+    void Update()
+    {
         UpdateArray(Input.GetKeyDown(listenTo));
+    }
+
+    void CreateWave()
+    {
+        //Debug.Log("Creating wave - " + GetCurrentWave().ToString());
+        Debug.Log("Creating wave");
+        GameObject wave = Instantiate(wavePrefab, this.transform.position, Quaternion.identity);
+        wave.GetComponent<Rigidbody>().velocity = new Vector3(1, 1, 1);
     }
 
     private void UpdateArray(bool isClick)
@@ -33,6 +48,7 @@ public class Player : MonoBehaviour {
 
     public GameBalance.FreqColor GetCurrentWave()
     {
+//        return GameBalance.
         GameBalance.Instance.ColorThresholds[0] = 1.0f;
         float freq = GetCurrentFrequency();
         for(int i=0; i<GameBalance.Instance.ColorThresholds.Length && i<GameBalance.Instance.freqColors.Length; i++)
