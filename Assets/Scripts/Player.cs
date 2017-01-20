@@ -4,22 +4,28 @@ using UnityEngine;
 
 public class Player : MonoBehaviour {
 
-    List<float> samples;
+  List<float> samples;
+  KeyCode listenTo;
 
 	void Start () {
         samples = new List<float>();
-    }
+  }
 
 	void Update () {
-	    // check input from keyboard or gamepad
-        // calculate frequency (with moving window)
+      UpdateArray(Input.GetKeyDown(listenTo))
+  }
 
-	}
+  private void UpdateArray(isClick) {
+      if (isClick) {
+          samples.Add(Time.time);
+      }
+      samples.RemoveWhere(time => time < (Time.time - GameBalance.Instance.windowSeconds)
+  }
 
-    public float GetCurrentFrequency()
-    {
-        return 1f;
-    }
+  public float GetCurrentFrequency()
+  {
+      return samples.Count / GameBalance.Instance.windowSeconds;
+  }
 
-    // animate siren sprite
+  // animate siren sprite
 }
