@@ -4,15 +4,17 @@ using UnityEngine;
 
 public class MusicManager : MonoBehaviour {
 
+    AudioSource[] sources;
+
     void Start()
     {
 
-        AudioSource[] sources = gameObject.GetComponentsInChildren<AudioSource>();
+        sources = gameObject.GetComponentsInChildren<AudioSource>();
         Debug.Log(sources.Length.ToString());
         foreach (AudioSource s in sources)
         {
             Debug.Log(s.name);
-            s.volume = 1f;
+            s.volume = 0f;
             s.Play();
         }
 
@@ -25,43 +27,108 @@ public class MusicManager : MonoBehaviour {
 
         //ManageMusic();
     }
-    void ManageMusic(float leftFreq, float rightFreq)
+
+    void Update()
     {
-
-        // music
-
-        GameBalance.FreqColor color1 = GameBalance.Instance.GetColor(leftFreq);
-        GameBalance.FreqColor color2 = GameBalance.Instance.GetColor(rightFreq);
+        ManageMusic();
+    }
+    void ManageMusic()
+    {
+        GameBalance.FreqColor color1 = GameManager.Instance.playerLeft.GetComponent<Player>().GetCurrentWave();
+        GameBalance.FreqColor color2 = GameManager.Instance.playerRight.GetComponent<Player>().GetCurrentWave();
 
         GameBalance.FreqColor[] coloredPair = GetOrderedColorPair(color1, color2);
 
         if (coloredPair[0] == GameBalance.FreqColor.White)
         {
-            //baseMusic.volume = 1f;
+            sources[0].volume = 1f;
+            sources[1].volume = 1f;
+            sources[2].volume = 0f;
+            sources[3].volume = 0f;
+            sources[4].volume = 0f;
+            sources[5].volume = 0f;
+            sources[6].volume = 0f;
+            sources[7].volume = 0f;
+            sources[8].volume = 0f;
+            sources[9].volume = 0f;
         }
         else if (coloredPair[0] == GameBalance.FreqColor.Blue)
         {
-            // base sound + first layer
+            sources[0].volume = 1f;
+            sources[1].volume = 1f;
+            sources[2].volume = 1f;
+            sources[3].volume = 0f;
+            sources[4].volume = 0f;
+            sources[5].volume = 0f;
+            sources[6].volume = 0f;
+            sources[7].volume = 0f;
+            sources[8].volume = 0f;
+            sources[9].volume = 0f;
         }
         else if ((coloredPair[0] == GameBalance.FreqColor.Yellow) && (coloredPair[1] <= GameBalance.FreqColor.Blue))
         {
-            // next layer
+            sources[0].volume = 1f;
+            sources[1].volume = 1f;
+            sources[2].volume = 0f;
+            sources[3].volume = 1f;
+            sources[4].volume = 0f;
+            sources[5].volume = 0f;
+            sources[6].volume = 0f;
+            sources[7].volume = 0f;
+            sources[8].volume = 0f;
+            sources[9].volume = 0f;
         }
         else if ((coloredPair[0] == GameBalance.FreqColor.Yellow) && (coloredPair[1] == GameBalance.FreqColor.Yellow))
         {
-            // next layer
+            sources[0].volume = 1f;
+            sources[1].volume = 1f;
+            sources[2].volume = 0f;
+            sources[3].volume = 0f;
+            sources[4].volume = 1f;
+            sources[5].volume = 1f;
+            sources[6].volume = 0f;
+            sources[7].volume = 0f;
+            sources[8].volume = 0f;
+            sources[9].volume = 0f;
         }
         else if ((coloredPair[0] == GameBalance.FreqColor.Red) && (coloredPair[1] <= GameBalance.FreqColor.Blue))
         {
-            // next layer
+            sources[0].volume = 1f;
+            sources[1].volume = 1f;
+            sources[2].volume = 0f;
+            sources[3].volume = 0f;
+            sources[4].volume = 0f;
+            sources[5].volume = 0f;
+            sources[6].volume = 1f;
+            sources[7].volume = 0f;
+            sources[8].volume = 0f;
+            sources[9].volume = 0f;
         }
         else if ((coloredPair[0] == GameBalance.FreqColor.Red) && (coloredPair[1] <= GameBalance.FreqColor.Yellow))
         {
-            // next layer
+            sources[0].volume = 1f;
+            sources[1].volume = 1f;
+            sources[2].volume = 0f;
+            sources[3].volume = 0f;
+            sources[4].volume = 0f;
+            sources[5].volume = 0f;
+            sources[6].volume = 0f;
+            sources[7].volume = 1f;
+            sources[8].volume = 0f;
+            sources[9].volume = 0f;
         }
         else if ((coloredPair[0] == GameBalance.FreqColor.Red) && (coloredPair[1] == GameBalance.FreqColor.Red))
         {
-            // next layer
+            sources[0].volume = 1f;
+            sources[1].volume = 1f;
+            sources[2].volume = 0f;
+            sources[3].volume = 0f;
+            sources[4].volume = 0f;
+            sources[5].volume = 0f;
+            sources[6].volume = 0f;
+            sources[7].volume = 0f;
+            sources[8].volume = 1f;
+            sources[9].volume = 1f;
         }
     }
 
