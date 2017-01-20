@@ -11,7 +11,7 @@ public class BoatBehavior : MonoBehaviour {
     bool rightSideHit = false;
 
     void Start () {
-		
+
 	}
 
 	void Update () {
@@ -31,7 +31,7 @@ public class BoatBehavior : MonoBehaviour {
             // kill ship
             //gameObject.SetActive(false);
             AnimateSinking();
-            Debug.Log("Ship sunk!");
+            Score.Instance.UpdateScore();
             Destroy(gameObject);
         }
 	}

@@ -19,9 +19,6 @@ public class FreqBar : MonoBehaviour {
 	}
 
 	void Update () {
-		// get the current frequency of this player and display that % of the bar
-
-        // change color to the color that corresponds to this frequency
         float freq = playerObj.GetComponent<Player>().GetCurrentFrequency();
         image.fillAmount = freq / 10f;
         image.color = GameBalance.Instance.actualColors[GameBalance.Instance.GetColor(freq)];
