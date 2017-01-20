@@ -35,7 +35,7 @@ public class GameBalance : MonoBehaviour {
         float end;
     }
 
-    public Dictionary<FreqColor, FreqRange> frequencyRangesByColor;
+    public Dictionary<FreqColor, float> frequencyThresholdsByColor;
 
     void Awake () {
         Instance = this;
@@ -53,16 +53,30 @@ public class GameBalance : MonoBehaviour {
         actualColors[FreqColor.Yellow] = new Color(0, 255, 0);
         actualColors[FreqColor.Red] = new Color(255, 0, 0);
 
-        frequencyRangesByColor = new Dictionary<FreqColor, FreqRange>();
-        frequencyRangesByColor[FreqColor.White] = new FreqRange(0f, 0.5f);
-        frequencyRangesByColor[FreqColor.Red] = new FreqRange(0.5f, 1f);
-        frequencyRangesByColor[FreqColor.Yellow] = new FreqRange(1f, 2f);
-        frequencyRangesByColor[FreqColor.Blue] = new FreqRange(2f, 4f);
+        frequencyThresholdsByColor = new Dictionary<FreqColor, float>();
+        frequencyThresholdsByColor[FreqColor.White] = 0f;
+        frequencyThresholdsByColor[FreqColor.Blue] = 0.5f;
+        frequencyThresholdsByColor[FreqColor.Yellow] = 1f;
+        frequencyThresholdsByColor[FreqColor.Red] = 2f;
     }
 
     public FreqColor GetColor(float freq)
     {
-        // actually return the right thing
-        return FreqColor.Red;
+        if (freq >= frequencyThresholdsByColor[FreqColor.Red])
+        {
+            return FreqColor.Red;
+        }
+        else if (freq >= frequencyThresholdsByColor[FreqColor.Yellow])
+        {
+            return FreqColor.Yellow;
+        }
+        else if (freq >= frequencyThresholdsByColor[FreqColor.Blue])
+        {
+            return FreqColor.Blue;
+        }
+        else
+        {
+            return FreqColor.White;
+        }
     }
 }
