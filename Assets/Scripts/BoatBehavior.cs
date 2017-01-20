@@ -42,6 +42,7 @@ public class BoatBehavior : MonoBehaviour {
 
     void OnTriggerEnter2D(Collider2D other)
     {
+        Debug.Log("OnTriggerEnter2D Boat");
         if (other.tag == "waveRight")
         {
             if (other.GetComponent<WaveBehavior>().waveColor == rightSideColor)

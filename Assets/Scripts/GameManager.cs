@@ -9,12 +9,16 @@ public class GameManager : MonoBehaviour {
     public GameObject playerLeft;
     public GameObject playerRight;
 
-    public AudioSource baseMusic;
-    public AudioSource blueBlueLayer;
-    public AudioSource blueYellowLayer;
-    public AudioSource yellowYellowLayer;
-    public AudioSource yellowRedLayer;
-    public AudioSource redRedLayer;
+    public AudioSource baseLayer;
+    public AudioSource baseLayerWaves;
+    public AudioSource layer1;
+    public AudioSource layer2;
+    public AudioSource layer3a;
+    public AudioSource layer3b;
+    public AudioSource layer4;
+    public AudioSource layer5;
+    public AudioSource layer6;
+    public AudioSource layer7;
 
     public GameObject shipPrefab;
 
@@ -41,8 +45,12 @@ public class GameManager : MonoBehaviour {
         GameObject newShip = Instantiate(shipPrefab, shipPos, Quaternion.identity) as GameObject;
         // init a prefab ship with random ShipType
         // also random position from list
-        newShip.GetComponent<BoatBehavior>().leftSideColor = GameBalance.FreqColor.Red;
-        newShip.GetComponent<BoatBehavior>().rightSideColor = GameBalance.FreqColor.Red;
+        
+        newShip.GetComponent<BoatBehavior>().leftSideColor = (GameBalance.FreqColor)Random.Range(1, 3);
+        //newShip.GetComponent<BoatBehavior>().rightSideColor = (GameBalance.FreqColor)Random.Range(1, 3);
+        newShip.GetComponent<BoatBehavior>().rightSideColor = newShip.GetComponent<BoatBehavior>().leftSideColor;
+        Debug.Log("Created ship - left color: " + newShip.GetComponent<BoatBehavior>().leftSideColor.ToString() + ", right color: " + newShip.GetComponent<BoatBehavior>().rightSideColor);
+        newShip.GetComponent<SpriteRenderer>().color = GameBalance.Instance.actualColors[newShip.GetComponent<BoatBehavior>().leftSideColor];
     }
 
     void GenerateWaves()
@@ -70,7 +78,7 @@ public class GameManager : MonoBehaviour {
 
         if (coloredPair[0] == GameBalance.FreqColor.White)
         {
-            baseMusic.volume = 1f;
+            //baseMusic.volume = 1f;
         }
         else if (coloredPair[0] == GameBalance.FreqColor.Blue)
         {
