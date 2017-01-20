@@ -16,6 +16,8 @@ public class Player : MonoBehaviour
     {
         samples = new List<float>();
 
+        UpdateArray(Input.GetKeyDown(listenTo));
+
         InvokeRepeating("CreateWave", GameBalance.Instance.createWaveEveryXSec, GameBalance.Instance.createWaveEveryXSec);
     }
 

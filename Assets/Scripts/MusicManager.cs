@@ -5,19 +5,26 @@ using UnityEngine;
 public class MusicManager : MonoBehaviour {
 
 
-    public AudioSource baseLayer;
-    public AudioSource baseLayerWaves;
-    public AudioSource layer1;
-    public AudioSource layer2;
-    public AudioSource layer3a;
-    public AudioSource layer3b;
-    public AudioSource layer4;
-    public AudioSource layer5;
-    public AudioSource layer6;
-    public AudioSource layer7;
+    public AudioClip baseLayer;
+    public AudioClip baseLayerWaves;
+    public AudioClip layer1;
+    public AudioClip layer2;
+    public AudioClip layer3a;
+    public AudioClip layer3b;
+    public AudioClip layer4;
+    public AudioClip layer5;
+    public AudioClip layer6;
+    public AudioClip layer7;
 
     void Start()
     {
+
+        AudioSource[] sources = gameObject.GetComponentsInChildren<AudioSource>();
+        Debug.Log(sources.ToString());
+
+        //gameObject.GetComponent<AudioSource>();
+        //AudioSource baseLayerClip = gameObject.AddComponent(AudioSource);
+
         //ManageMusic();
     }
     void ManageMusic(float leftFreq, float rightFreq)
