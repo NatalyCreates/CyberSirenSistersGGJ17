@@ -22,7 +22,7 @@ public class BoatBehavior : MonoBehaviour {
 
         // has collider
 
-        if (rightSideHit && leftSideHit)
+        if (rightSideHit || leftSideHit)
         {
             // ship is hit!
             // sink

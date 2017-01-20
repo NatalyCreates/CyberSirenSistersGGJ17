@@ -21,9 +21,10 @@ GameObject:
   - component: {fileID: 4503388801189314}
   - component: {fileID: 212236220423362828}
   - component: {fileID: 114108258419725516}
+  - component: {fileID: 50517883179557110}
   m_Layer: 0
   m_Name: WaveSliceRight
-  m_TagString: Untagged
+  m_TagString: waveRight
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -41,6 +42,26 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!50 &50517883179557110
+Rigidbody2D:
+  serializedVersion: 4
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1758652162156472}
+  m_BodyType: 0
+  m_Simulated: 1
+  m_UseFullKinematicContacts: 0
+  m_UseAutoMass: 0
+  m_Mass: 1
+  m_LinearDrag: 0
+  m_AngularDrag: 0.05
+  m_GravityScale: 1
+  m_Material: {fileID: 0}
+  m_Interpolate: 0
+  m_SleepingMode: 1
+  m_CollisionDetection: 0
+  m_Constraints: 0
 --- !u!114 &114108258419725516
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -53,6 +74,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   waveColor: 0
+  xSpeed: 0
+  ySpeed: 0
   side: 0
 --- !u!212 &212236220423362828
 SpriteRenderer:

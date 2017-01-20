@@ -40,6 +40,9 @@ public class GameBalance : MonoBehaviour {
     void Awake () {
         Instance = this;
 
+        createWaveEveryXSec = 1f;
+        windowSeconds = 1f;
+
         possibleShipStartPosX = new List<float>();
         possibleShipStartPosX.Add(200);
         possibleShipStartPosX.Add(400);

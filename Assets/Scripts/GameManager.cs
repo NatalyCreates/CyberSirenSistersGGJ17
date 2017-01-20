@@ -41,6 +41,8 @@ public class GameManager : MonoBehaviour {
         GameObject newShip = Instantiate(shipPrefab, shipPos, Quaternion.identity) as GameObject;
         // init a prefab ship with random ShipType
         // also random position from list
+        newShip.GetComponent<BoatBehavior>().leftSideColor = GameBalance.FreqColor.Red;
+        newShip.GetComponent<BoatBehavior>().rightSideColor = GameBalance.FreqColor.Red;
     }
 
     void GenerateWaves()
