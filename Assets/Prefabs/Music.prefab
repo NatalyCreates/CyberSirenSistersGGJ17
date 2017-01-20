@@ -1159,13 +1159,3 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d75a80289dd939f46be5c094aeca6c68, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  baseLayer: {fileID: 0}
-  baseLayerWaves: {fileID: 0}
-  layer1: {fileID: 0}
-  layer2: {fileID: 0}
-  layer3a: {fileID: 0}
-  layer3b: {fileID: 0}
-  layer4: {fileID: 0}
-  layer5: {fileID: 0}
-  layer6: {fileID: 0}
-  layer7: {fileID: 0}

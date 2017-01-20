@@ -13,6 +13,7 @@ public class MusicManager : MonoBehaviour {
         {
             Debug.Log(s.name);
             s.volume = 1f;
+            s.Play();
         }
 
         sources[0].volume = 1f;
