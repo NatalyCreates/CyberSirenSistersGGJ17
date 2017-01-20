@@ -101,7 +101,7 @@ public class GameBalance : MonoBehaviour {
     }
 
     public double WindowFn(float timeDelta) {
-        return Math.E * (1 - Math.Pow(Math.E, -raiseLambda * timeDelta))
+        return 1.4 * (1 - Math.Pow(Math.E, -raiseLambda * timeDelta))
             * Math.Pow(Math.E, -decayLambda * timeDelta);
     }
 }

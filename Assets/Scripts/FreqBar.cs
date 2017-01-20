@@ -20,5 +20,6 @@ public class FreqBar : MonoBehaviour {
         // change color to the color that corresponds to this frequency
         float freq = playerObj.GetComponent<Player>().GetCurrentFrequency();
         image.fillAmount = freq / 10f;
+        image.color = GameBalance.Instance.actualColors[GameBalance.Instance.GetColor(freq)];
 	}
 }
