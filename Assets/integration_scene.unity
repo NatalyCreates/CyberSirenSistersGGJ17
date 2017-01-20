@@ -167,6 +167,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f396be187dc59214c9a7845e8b1b972c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  listenTo: 13
   wavePrefab: {fileID: 1758652162156472, guid: b808e357fb7238f4f8ac38a48bff0dfc, type: 2}
 --- !u!1 &281236502
 GameObject:
@@ -739,6 +740,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   player: 0
+  playerObj: {fileID: 0}
 --- !u!114 &1104597102
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -835,6 +837,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   player: 0
+  playerObj: {fileID: 0}
 --- !u!1 &1399156622
 GameObject:
   m_ObjectHideFlags: 0
@@ -1371,6 +1374,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f396be187dc59214c9a7845e8b1b972c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  listenTo: 9
   wavePrefab: {fileID: 1821897732622324, guid: de19141e03e3eb94bade78b82f65b2cc, type: 2}
 --- !u!1 &2048227879
 GameObject:
