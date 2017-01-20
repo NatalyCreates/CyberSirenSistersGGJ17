@@ -449,6 +449,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   wavesGenerator: {fileID: 901503089}
+  wave: {fileID: 1196398549}
 --- !u!4 &2118676499
 Transform:
   m_ObjectHideFlags: 0

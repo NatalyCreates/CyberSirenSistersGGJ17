@@ -12,6 +12,8 @@ public class GameBalance : MonoBehaviour {
 
     public enum FreqColor { White, Blue, Yellow, Red };
 
+    public float[] ColorThresholds;
+
     public FreqColor[] freqColors;
 
     public Dictionary<FreqColor, Color> actualColors;
