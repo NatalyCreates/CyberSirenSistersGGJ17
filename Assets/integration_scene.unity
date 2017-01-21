@@ -167,7 +167,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f396be187dc59214c9a7845e8b1b972c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  listenTo: 13
   wavePrefab: {fileID: 1758652162156472, guid: b808e357fb7238f4f8ac38a48bff0dfc, type: 2}
 --- !u!1 &291478838
 GameObject:
@@ -536,6 +535,7 @@ MonoBehaviour:
   freqColors: 
   possibleShipStartPosX: []
   windowSeconds: 0
+  Level_time: 0
   createWaveEveryXSec: 0
   shipRateMin: 0
   shipRateMax: 0
@@ -545,6 +545,8 @@ MonoBehaviour:
   shipMaxSpeed: 0
   raiseLambda: 0
   decayLambda: 0
+  leftPlayerKeys: 
+  rightPlayerKeys: 
 --- !u!1 &643954379
 GameObject:
   m_ObjectHideFlags: 0
@@ -917,70 +919,6 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 0
---- !u!1 &940227214
-GameObject:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  serializedVersion: 5
-  m_Component:
-  - component: {fileID: 940227216}
-  - component: {fileID: 940227215}
-  m_Layer: 0
-  m_Name: BlackBGTop
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!212 &940227215
-SpriteRenderer:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 940227214}
-  m_Enabled: 1
-  m_CastShadows: 0
-  m_ReceiveShadows: 0
-  m_MotionVectors: 1
-  m_LightProbeUsage: 0
-  m_ReflectionProbeUsage: 0
-  m_Materials:
-  - {fileID: 10754, guid: 0000000000000000f000000000000000, type: 0}
-  m_StaticBatchInfo:
-    firstSubMesh: 0
-    subMeshCount: 0
-  m_StaticBatchRoot: {fileID: 0}
-  m_ProbeAnchor: {fileID: 0}
-  m_LightProbeVolumeOverride: {fileID: 0}
-  m_ScaleInLightmap: 1
-  m_PreserveUVs: 0
-  m_IgnoreNormalsForChartDetection: 0
-  m_ImportantGI: 0
-  m_SelectedEditorRenderState: 0
-  m_MinimumChartSize: 4
-  m_AutoUVMaxDistance: 0.5
-  m_AutoUVMaxAngle: 89
-  m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 358194671
-  m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: 18c5afec4d82f9e46b045e77705cf314, type: 3}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
-  m_FlipX: 0
-  m_FlipY: 0
---- !u!4 &940227216
-Transform:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 940227214}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 500, z: 0}
-  m_LocalScale: {x: 30, y: 1, z: 1}
-  m_Children: []
-  m_Father: {fileID: 0}
-  m_RootOrder: 12
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1014191634
 GameObject:
   m_ObjectHideFlags: 0
@@ -1419,7 +1357,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: aab54c6f03464c746a771d6370b14a45, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  curtime: 61
 --- !u!1 &1694901041
 GameObject:
   m_ObjectHideFlags: 0
@@ -1698,7 +1635,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f396be187dc59214c9a7845e8b1b972c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  listenTo: 9
   wavePrefab: {fileID: 1821897732622324, guid: de19141e03e3eb94bade78b82f65b2cc, type: 2}
 --- !u!95 &1883271580
 Animator:
