@@ -72,7 +72,7 @@ public class MusicManager : MonoBehaviour {
         {
             sources[0].volume = 1f;
             sources[1].volume = 1f;
-            sources[2].volume = 0f;
+            sources[2].volume = 1f;
             sources[3].volume = 1f;
             sources[4].volume = 0f;
             sources[5].volume = 0f;

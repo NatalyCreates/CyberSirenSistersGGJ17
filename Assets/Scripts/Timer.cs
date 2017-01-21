@@ -6,13 +6,14 @@ using UnityEngine.UI;
 public class Timer : MonoBehaviour {
 
     public static Timer Instance;
-    public int curtime;
+    int curtime;
     Text timerText;
 
     // Use this for initialization
     void Awake()
     {
         Instance = this;
+		curtime = GameBalance.Instance.Level_time;
         timerText = GetComponent<Text>();
         UpdateTimerLoop();
     }
