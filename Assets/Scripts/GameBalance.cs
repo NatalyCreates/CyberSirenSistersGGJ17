@@ -66,7 +66,7 @@ public class GameBalance : MonoBehaviour {
         shipMaxXPos = 550;
 
         shipMinSpeed = 25;
-        shipMaxSpeed = 75;
+        shipMaxSpeed = 125;
 
         /*
         possibleShipStartPosX = new List<float>();
