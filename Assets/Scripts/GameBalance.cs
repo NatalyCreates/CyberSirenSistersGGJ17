@@ -23,6 +23,8 @@ public class GameBalance : MonoBehaviour {
 
     public float windowSeconds;
 
+	public int Level_time;
+
     public float createWaveEveryXSec;
 
     public float shipRateMin, shipRateMax;
@@ -50,6 +52,7 @@ public class GameBalance : MonoBehaviour {
 
         createWaveEveryXSec = 0.5f;
         windowSeconds = 1f;
+		Level_time = 121;
         raiseLambda = 8.0;
         decayLambda = 1.0f;
 
