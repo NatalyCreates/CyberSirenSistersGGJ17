@@ -26,7 +26,7 @@ public class Player : MonoBehaviour
 
     void Update()
     {
-        UpdateArray(IsKeyDown());
+        UpdateArray(IsKeyDown() || GetHasTouch());
     }
 
     bool IsKeyDown()
@@ -68,5 +68,15 @@ public class Player : MonoBehaviour
     {
         return GameBalance.Instance.GetColor(GetCurrentFrequency());
     }
-    // animate siren sprite
+
+    bool GetHasTouch() {
+        foreach (Touch touch in Input.touches) {
+            if (touch.phase == TouchPhase.Began && touch.position.x < 0 && this.name == "LeftSiren") {
+                return true;
+            } else if (touch.phase == TouchPhase.Began && touch.position.x > 0 && this.name == "RightSiren") {
+                return true;
+            }
+        }
+        return false;
+    }
 }
