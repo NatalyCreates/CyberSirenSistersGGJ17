@@ -52,7 +52,7 @@ public class GameBalance : MonoBehaviour {
 
         createWaveEveryXSec = 0.5f;
         windowSeconds = 1f;
-		Level_time = 121;
+		Level_time = 31;
         raiseLambda = 8.0;
         decayLambda = 1.0f;
 

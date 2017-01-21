@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.SceneManagement;
 
 public class Timer : MonoBehaviour {
 
@@ -26,7 +27,9 @@ public class Timer : MonoBehaviour {
     void UpdateTimerLoop()
     {
         curtime--;
-        // TODO do whatever when curtime==0
+		if (curtime == 0) {
+			SceneManager.LoadScene("Won");
+		}
         Invoke("UpdateTimerLoop", 1);
     }
 }
