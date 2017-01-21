@@ -22,6 +22,7 @@ public class MenuBehavior : MonoBehaviour {
 
     public void ShowHelp () {
 		PushButton(GameObject.Find("HelpButton"));
+        SceneManager.LoadScene("Help");
     }
 
     public void Exit () {
