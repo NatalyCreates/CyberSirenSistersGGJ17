@@ -612,15 +612,15 @@ RectTransform:
   m_GameObject: {fileID: 989868750}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 2, y: 2, z: 1}
   m_Children: []
   m_Father: {fileID: 424030747}
   m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 599, y: 114}
-  m_SizeDelta: {x: 240, y: 90}
+  m_AnchoredPosition: {x: -730.5, y: 0}
+  m_SizeDelta: {x: 178.1, y: 500}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &989868752
 MonoBehaviour:
@@ -634,7 +634,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 0.9338235, g: 0.9338235, b: 0.9338235, a: 1}
+  m_Color: {r: 0.75735295, g: 0.60327077, b: 0.1002379, a: 1}
   m_RaycastTarget: 1
   m_OnCullStateChanged:
     m_PersistentCalls:
@@ -643,7 +643,7 @@ MonoBehaviour:
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
   m_FontData:
     m_Font: {fileID: 10102, guid: 0000000000000000e000000000000000, type: 0}
-    m_FontSize: 18
+    m_FontSize: 24
     m_FontStyle: 0
     m_BestFit: 0
     m_MinSize: 1
@@ -654,7 +654,22 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: Cyborg Siren Sisters was made for GGJ 2017 by trodden-eyed people
+  m_Text: 'Cyborg Siren Sisters was made for GGJ 2017 by:
+
+
+    Natalie
+
+    Michael
+
+    Yoav
+
+    Dafi
+
+    Ravid
+
+    Gil
+
+    Sasha'
 --- !u!222 &989868753
 CanvasRenderer:
   m_ObjectHideFlags: 0
