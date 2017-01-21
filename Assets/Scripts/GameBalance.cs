@@ -55,12 +55,12 @@ public class GameBalance : MonoBehaviour {
 
         createWaveEveryXSec = 0.5f;
         windowSeconds = 1f;
-		Level_time = 31;
+		Level_time = 121;
         raiseLambda = 8.0;
         decayLambda = 1.0f;
 
         shipRateMin = 1f;
-        shipRateMax = 5f;
+        shipRateMax = 3f;
 
         shipMinXPos = -550;
         shipMaxXPos = 550;
