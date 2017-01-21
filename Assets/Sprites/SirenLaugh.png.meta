@@ -1,0 +1,284 @@
+fileFormatVersion: 2
+guid: 4dacf2833bbeb427a926d12bc053fed7
+timeCreated: 1484991910
+licenseType: Free
+TextureImporter:
+  fileIDToRecycleName:
+    21300000: siren_laugh_00000
+    21300002: siren_laugh_00001
+    21300004: siren_laugh_00002
+    21300006: siren_laugh_00003
+    21300008: siren_laugh_00004
+    21300010: siren_laugh_00005
+    21300012: siren_laugh_00006
+    21300014: siren_laugh_00007
+    21300016: siren_laugh_00008
+    21300018: siren_laugh_00009
+    21300020: siren_laugh_00010
+    21300022: siren_laugh_00011
+  serializedVersion: 4
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+  isReadable: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    filterMode: -1
+    aniso: -1
+    mipBias: -1
+    wrapMode: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 0
+  spriteMeshType: 0
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spriteBorder: {x: 0, y: 1019, z: 256, w: 0}
+  spritePixelsToUnits: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  platformSettings:
+  - buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+  - buildTarget: Standalone
+    maxTextureSize: 2048
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+  - buildTarget: iPhone
+    maxTextureSize: 2048
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+  - buildTarget: Android
+    maxTextureSize: 2048
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+  - buildTarget: Tizen
+    maxTextureSize: 2048
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+  - buildTarget: WebGL
+    maxTextureSize: 2048
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+  - buildTarget: Samsung TV
+    maxTextureSize: 2048
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: siren_laugh_00000
+      rect:
+        serializedVersion: 2
+        x: 775
+        y: 618
+        width: 245
+        height: 202
+      alignment: 9
+      pivot: {x: 0.52244896, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: siren_laugh_00001
+      rect:
+        serializedVersion: 2
+        x: 1
+        y: 6
+        width: 251
+        height: 202
+      alignment: 9
+      pivot: {x: 0.5099602, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: siren_laugh_00002
+      rect:
+        serializedVersion: 2
+        x: 1
+        y: 821
+        width: 256
+        height: 202
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: siren_laugh_00003
+      rect:
+        serializedVersion: 2
+        x: 259
+        y: 821
+        width: 256
+        height: 202
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: siren_laugh_00004
+      rect:
+        serializedVersion: 2
+        x: 517
+        y: 821
+        width: 256
+        height: 202
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: siren_laugh_00005
+      rect:
+        serializedVersion: 2
+        x: 1
+        y: 414
+        width: 256
+        height: 202
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: siren_laugh_00006
+      rect:
+        serializedVersion: 2
+        x: 1
+        y: 210
+        width: 255
+        height: 202
+      alignment: 9
+      pivot: {x: 0.5019608, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: siren_laugh_00007
+      rect:
+        serializedVersion: 2
+        x: 1
+        y: 618
+        width: 252
+        height: 201
+      alignment: 9
+      pivot: {x: 0.50793654, y: 0.50248754}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: siren_laugh_00008
+      rect:
+        serializedVersion: 2
+        x: 254
+        y: 6
+        width: 250
+        height: 202
+      alignment: 9
+      pivot: {x: 0.512, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: siren_laugh_00009
+      rect:
+        serializedVersion: 2
+        x: 775
+        y: 822
+        width: 248
+        height: 201
+      alignment: 9
+      pivot: {x: 0.516129, y: 0.50248754}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: siren_laugh_00010
+      rect:
+        serializedVersion: 2
+        x: 259
+        y: 414
+        width: 243
+        height: 202
+      alignment: 9
+      pivot: {x: 0.52674896, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: siren_laugh_00011
+      rect:
+        serializedVersion: 2
+        x: 258
+        y: 210
+        width: 245
+        height: 202
+      alignment: 9
+      pivot: {x: 0.52244896, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: -1
+    outline: []
+  spritePackingTag: 
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
