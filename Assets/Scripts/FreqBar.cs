@@ -20,7 +20,7 @@ public class FreqBar : MonoBehaviour {
 
 	void Update () {
         float freq = playerObj.GetComponent<Player>().GetCurrentFrequency();
-        image.fillAmount = freq / 10f;
-        image.color = GameBalance.Instance.actualColors[GameBalance.Instance.GetColor(freq)];
+        image.fillAmount = freq / 5f;
+        //image.color = GameBalance.Instance.actualColors[GameBalance.Instance.GetColor(freq)];
 	}
 }

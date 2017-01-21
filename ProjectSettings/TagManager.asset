@@ -54,6 +54,9 @@ TagManager:
   - name: Ships
     uniqueID: 4053228775
     locked: 0
+  - name: BlackLayer
+    uniqueID: 358194671
+    locked: 0
   - name: Rocks
     uniqueID: 3627794615
     locked: 0
