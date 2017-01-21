@@ -141,7 +141,7 @@ public class MusicManager : MonoBehaviour {
 
     public void PlaySunkShipEffect()
     {
-        sources[7].volume = 1f;
+        sources[7].volume = 0.5f;
         sources[7].PlayOneShot(sunkShip);
     }
 

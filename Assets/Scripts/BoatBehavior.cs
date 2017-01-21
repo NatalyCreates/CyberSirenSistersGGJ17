@@ -36,13 +36,12 @@ public class BoatBehavior : MonoBehaviour {
             // animate
             // kill ship
 
-            MusicManager.Instance.PlaySunkShipEffect();
-
             AnimateSinking();
             if (!scoreUpdated)
             {
                 Score.Instance.UpdateScore();
                 scoreUpdated = true;
+                MusicManager.Instance.PlaySunkShipEffect();
             }
             gameObject.GetComponent<Collider2D>().enabled = false;
             Destroy(gameObject, 5); // TODO destroy time param
