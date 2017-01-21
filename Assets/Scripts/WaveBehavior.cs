@@ -20,7 +20,8 @@ public class WaveBehavior : MonoBehaviour {
         switch (waveColor)
         {
             case GameBalance.FreqColor.White:
-                color = Color.white;
+                //color = Color.white;
+                color = new Color(255, 255, 255, 0);
                 break;
             case GameBalance.FreqColor.Red:
                 color = Color.red;
