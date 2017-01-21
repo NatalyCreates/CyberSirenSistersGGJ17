@@ -101,6 +101,7 @@ GameObject:
   - component: {fileID: 84287182}
   - component: {fileID: 84287181}
   - component: {fileID: 84287183}
+  - component: {fileID: 84287184}
   m_Layer: 0
   m_Name: SirenRight
   m_TagString: Untagged
@@ -137,9 +138,9 @@ SpriteRenderer:
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 0
+  m_SortingLayerID: -771683875
   m_SortingOrder: 0
-  m_Sprite: {fileID: 0}
+  m_Sprite: {fileID: 21300000, guid: 3b008b9a6c47a4b549d23e0f2c2f0f1d, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -150,7 +151,7 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 84287180}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 850, y: -270, z: 0}
+  m_LocalPosition: {x: 606, y: -270, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -168,6 +169,23 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   wavePrefab: {fileID: 1758652162156472, guid: b808e357fb7238f4f8ac38a48bff0dfc, type: 2}
+--- !u!95 &84287184
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 84287180}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 5e259bceb9f9f4dd68627b94b7abce94, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
 --- !u!1 &291478838
 GameObject:
   m_ObjectHideFlags: 0
@@ -522,6 +540,14 @@ Prefab:
       propertyPath: m_RootOrder
       value: 7
       objectReference: {fileID: 0}
+    - target: {fileID: 4966908260146436, guid: 8ffadacbd6277584dbb32cb21906f45e, type: 2}
+      propertyPath: m_LocalScale.x
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4966908260146436, guid: 8ffadacbd6277584dbb32cb21906f45e, type: 2}
+      propertyPath: m_LocalScale.y
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 8ffadacbd6277584dbb32cb21906f45e, type: 2}
   m_IsPrefabParent: 0
@@ -857,6 +883,28 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1bebd1647c807a2489473f900c4a14f1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!1 &1252982546 stripped
+GameObject:
+  m_PrefabParentObject: {fileID: 1372651922268914, guid: 8ffadacbd6277584dbb32cb21906f45e,
+    type: 2}
+  m_PrefabInternal: {fileID: 645588522}
+--- !u!95 &1252982548
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1252982546}
+  m_Enabled: 0
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 134444c60eb794cd0aff2855ceb7681e, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
 --- !u!1 &1283552110
 GameObject:
   m_ObjectHideFlags: 0
