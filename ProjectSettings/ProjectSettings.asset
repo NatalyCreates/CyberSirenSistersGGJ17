@@ -6,11 +6,11 @@ PlayerSettings:
   serializedVersion: 10
   productGUID: 1968c56f776933b4ab56359873faed3e
   AndroidProfiler: 0
-  defaultScreenOrientation: 4
+  defaultScreenOrientation: 2
   targetDevice: 2
   useOnDemandResources: 0
   accelerometerFrequency: 60
-  companyName: DefaultCompany
+  companyName: SomeCompany
   productName: CyberSirenSisters
   defaultCursor: {fileID: 0}
   cursorHotspot: {x: 0, y: 0}
@@ -118,7 +118,7 @@ PlayerSettings:
     16:10: 1
     16:9: 1
     Others: 1
-  bundleIdentifier: com.Company.ProductName
+  bundleIdentifier: com.SomeCompany.CyberSirenSisters
   bundleVersion: 1.0
   preloadedAssets: []
   metroInputSource: 0
