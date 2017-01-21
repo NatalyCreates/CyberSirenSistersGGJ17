@@ -20,6 +20,8 @@ public class Player : MonoBehaviour
         InvokeRepeating("CreateWave", GameBalance.Instance.createWaveEveryXSec, GameBalance.Instance.createWaveEveryXSec);
 
         activeKeys = (this.name == "SirenLeft" ? GameBalance.Instance.leftPlayerKeys : GameBalance.Instance.rightPlayerKeys);
+
+        UpdateArray(IsKeyDown());
     }
 
     void Update()
