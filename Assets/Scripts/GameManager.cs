@@ -21,6 +21,7 @@ public class GameManager : MonoBehaviour {
 
     void Start()
     {
+        GameObject.FindGameObjectWithTag("data").GetComponent<ScoreData>().ResetData();
         CreateShipLoop();
     }
 
@@ -48,7 +49,7 @@ public class GameManager : MonoBehaviour {
     {
         //int rndPos = Random.Range(0, GameBalance.Instance.possibleShipStartPosX.Count);
         //Vector3 shipPos = new Vector3(GameBalance.Instance.possibleShipStartPosX[rndPos], 200, 0);
-        Vector3 shipPos = new Vector3(Random.Range(GameBalance.Instance.shipMinXPos, GameBalance.Instance.shipMaxXPos), 680, 0);
+        Vector3 shipPos = new Vector3(Random.Range(GameBalance.Instance.shipMinXPos, GameBalance.Instance.shipMaxXPos), 500, 0);
 
         /*
         GameBalance.ShipType shipType = (GameBalance.ShipType)Random.Range(
@@ -93,6 +94,11 @@ public class GameManager : MonoBehaviour {
 
     public void LoseGame()
     {
+        GameObject.FindGameObjectWithTag("data").GetComponent<ScoreData>().ScoreDataUpdateShip(GameObject.FindGameObjectWithTag("score").GetComponent<Score>().score);
+        GameObject.FindGameObjectWithTag("data").GetComponent<ScoreData>().ScoreDataUpdateTime(GameObject.FindGameObjectWithTag("timer").GetComponent<Timer>().curtime);
+
+        Debug.Log("Time " + GameObject.FindGameObjectWithTag("data").GetComponent<ScoreData>().GetTime().ToString());
+        Debug.Log("Score " + GameObject.FindGameObjectWithTag("data").GetComponent<ScoreData>().GetShips().ToString());
         SceneManager.LoadScene("Lost");
     }
 }

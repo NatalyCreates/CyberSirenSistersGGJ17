@@ -7,7 +7,7 @@ using UnityEngine.SceneManagement;
 public class Timer : MonoBehaviour {
 
     public static Timer Instance;
-    int curtime;
+    internal int curtime;
     Text timerText;
 
     // Use this for initialization
@@ -28,7 +28,11 @@ public class Timer : MonoBehaviour {
     {
         curtime--;
 		if (curtime == 0) {
-			SceneManager.LoadScene("Won");
+
+            GameObject.FindGameObjectWithTag("data").GetComponent<ScoreData>().ScoreDataUpdateShip(GameObject.FindGameObjectWithTag("score").GetComponent<Score>().score);
+            GameObject.FindGameObjectWithTag("data").GetComponent<ScoreData>().ScoreDataUpdateTime(GameObject.FindGameObjectWithTag("timer").GetComponent<Timer>().curtime);
+
+            SceneManager.LoadScene("Won");
 		}
         Invoke("UpdateTimerLoop", 1);
     }

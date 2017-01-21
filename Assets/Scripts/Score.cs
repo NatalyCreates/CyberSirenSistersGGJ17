@@ -6,7 +6,7 @@ using UnityEngine.UI;
 public class Score : MonoBehaviour {
 
 	public static Score Instance;
-	private int score;
+	internal int score;
 	Text scoreText;
 
 	// Use this for initialization

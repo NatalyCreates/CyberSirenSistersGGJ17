@@ -8,6 +8,9 @@ TagManager:
   - waveLeft
   - waveRight
   - boat
+  - timer
+  - score
+  - data
   layers:
   - Default
   - TransparentFX
