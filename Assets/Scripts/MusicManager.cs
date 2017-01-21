@@ -4,11 +4,19 @@ using UnityEngine;
 
 public class MusicManager : MonoBehaviour {
 
+    public static MusicManager Instance;
+
+    public AudioClip sunkShip;
+
     AudioSource[] sources;
+
+    void Awake()
+    {
+        Instance = this;
+    }
 
     void Start()
     {
-
         sources = gameObject.GetComponentsInChildren<AudioSource>();
         Debug.Log(sources.Length.ToString());
         foreach (AudioSource s in sources)
@@ -129,6 +137,12 @@ public class MusicManager : MonoBehaviour {
             orderedPair[1] = color1;
         }
         return orderedPair;
+    }
+
+    public void PlaySunkShipEffect()
+    {
+        sources[7].volume = 0.5f;
+        sources[7].PlayOneShot(sunkShip);
     }
 
 }

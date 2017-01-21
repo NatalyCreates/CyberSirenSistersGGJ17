@@ -7,30 +7,40 @@ public class Player : MonoBehaviour
 {
 
     List<float> samples;
-    public KeyCode listenTo; // = KeyCode.Space;   // TODO make configurable
     IEnumerable<double> windowed;
 
     public GameObject wavePrefab;
+
+    KeyCode[] activeKeys;
 
     void Start()
     {
         samples = new List<float>();
 
-        UpdateArray(Input.GetKeyDown(listenTo));
-
         InvokeRepeating("CreateWave", GameBalance.Instance.createWaveEveryXSec, GameBalance.Instance.createWaveEveryXSec);
+
+        activeKeys = (this.name == "SirenLeft" ? GameBalance.Instance.leftPlayerKeys : GameBalance.Instance.rightPlayerKeys);
     }
 
     void Update()
     {
-        UpdateArray(Input.GetKeyDown(listenTo));
+        UpdateArray(IsKeyDown());
+    }
+
+    bool IsKeyDown()
+    {
+        foreach(KeyCode k in activeKeys)
+        {
+            if (Input.GetKeyDown(k)) return true;
+        }
+        return false;
     }
 
     void CreateWave()
     {
         GameBalance.FreqColor color = GetCurrentWave();
-        //Debug.Log("Creating wave - " + color.ToString());
-        GameObject wave = Instantiate(wavePrefab, this.transform.position, Quaternion.identity);
+        Vector3 start = this.name == "SirenLeft" ? new Vector3(150, 150, 0) : new Vector3(-150, 150, 0);
+        GameObject wave = Instantiate(wavePrefab, start, Quaternion.identity);
         wave.GetComponent<WaveBehavior>().waveColor = color;
     }
 
@@ -55,20 +65,6 @@ public class Player : MonoBehaviour
     public GameBalance.FreqColor GetCurrentWave()
     {
         return GameBalance.Instance.GetColor(GetCurrentFrequency());
-        /*
-        GameBalance.Instance.ColorThresholds[0] = 1.0f;
-        float freq = GetCurrentFrequency();
-        for(int i=0; i<GameBalance.Instance.ColorThresholds.Length && i<GameBalance.Instance.freqColors.Length; i++)
-        {
-            // Find the frequency
-            if(freq < GameBalance.Instance.ColorThresholds[i])
-            {
-                return GameBalance.Instance.freqColors[i];
-            }
-        }
-        // Return the last color
-        return GameBalance.Instance.freqColors[GameBalance.Instance.freqColors.Length - 1];
-        */
     }
     // animate siren sprite
 }
