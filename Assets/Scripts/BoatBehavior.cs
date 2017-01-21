@@ -9,12 +9,18 @@ public class BoatBehavior : MonoBehaviour {
 
     bool leftSideHit = false;
     bool rightSideHit = false;
+    bool scoreUpdated = false;
+
+    private Vector3 rotateOnSink;
 
     void Start () {
+        // Randomize rotation on boat hit
+        rotateOnSink.x = Random.Range(-0.1f, 0.1f);
+        rotateOnSink.y = Random.Range(-0.2f, 0.2f);
+        rotateOnSink.z = Random.Range(-2, 2);
+    }
 
-	}
-
-	void Update () {
+    void Update () {
         // move
         float speed = Random.Range(GameBalance.Instance.shipMinSpeed, GameBalance.Instance.shipMaxSpeed);
         gameObject.GetComponent<Rigidbody2D>().velocity = new Vector2(0, -1*speed);
@@ -29,16 +35,25 @@ public class BoatBehavior : MonoBehaviour {
             // sink
             // animate
             // kill ship
-            //gameObject.SetActive(false);
             AnimateSinking();
-            Score.Instance.UpdateScore();
-            Destroy(gameObject);
+            if (!scoreUpdated)
+            {
+                Score.Instance.UpdateScore();
+                scoreUpdated = true;
+            }
+            gameObject.GetComponent<Collider2D>().enabled = false;
+            Destroy(gameObject, 5); // TODO destroy time param
         }
 	}
 
     void AnimateSinking()
     {
-
+        // Rotate
+        this.GetComponent<Transform>().Rotate(rotateOnSink);
+        // Fade out
+        Color c = this.GetComponent<SpriteRenderer>().material.color;
+        c.a = c.a - 0.02f;  // Fade rate
+        this.GetComponent<SpriteRenderer>().material.color = c;
     }
 
     void OnTriggerEnter2D(Collider2D other)
