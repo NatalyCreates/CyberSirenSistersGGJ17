@@ -20,9 +20,9 @@ GameObject:
   m_Component:
   - component: {fileID: 4386952994104340}
   - component: {fileID: 212084882449567398}
-  - component: {fileID: 61819197039806468}
   - component: {fileID: 50790270091136600}
   - component: {fileID: 114655341935024506}
+  - component: {fileID: 61653157419134590}
   m_Layer: 0
   m_Name: ShipRedBlue
   m_TagString: boat
@@ -63,7 +63,7 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 0
---- !u!61 &61819197039806468
+--- !u!61 &61653157419134590
 BoxCollider2D:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
@@ -76,7 +76,7 @@ BoxCollider2D:
   m_UsedByEffector: 0
   m_Offset: {x: 0, y: 0}
   serializedVersion: 2
-  m_Size: {x: 96, y: 274}
+  m_Size: {x: 54, y: 130}
 --- !u!114 &114655341935024506
 MonoBehaviour:
   m_ObjectHideFlags: 1
