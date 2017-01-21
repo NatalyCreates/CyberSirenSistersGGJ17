@@ -71,9 +71,9 @@ public class Player : MonoBehaviour
 
     bool GetHasTouch() {
         foreach (Touch touch in Input.touches) {
-            if (touch.phase == TouchPhase.Began && touch.position.x < 0 && this.name == "LeftSiren") {
+            if (touch.phase == TouchPhase.Began && touch.position.x < 1920/2 && this.name == "SirenLeft") {
                 return true;
-            } else if (touch.phase == TouchPhase.Began && touch.position.x > 0 && this.name == "RightSiren") {
+            } else if (touch.phase == TouchPhase.Began && touch.position.x > 1920/2 && this.name == "SirenRight") {
                 return true;
             }
         }

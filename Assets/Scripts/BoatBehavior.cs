@@ -43,6 +43,7 @@ public class BoatBehavior : MonoBehaviour {
                 Score.Instance.UpdateScore();
                 scoreUpdated = true;
                 MusicManager.Instance.PlaySunkShipEffect();
+                Handheld.Vibrate();
             }
             gameObject.GetComponent<Collider2D>().enabled = false;
             Destroy(gameObject, 5); // TODO destroy time param
