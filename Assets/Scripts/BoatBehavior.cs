@@ -10,6 +10,7 @@ public class BoatBehavior : MonoBehaviour {
     bool leftSideHit = false;
     bool rightSideHit = false;
     bool scoreUpdated = false;
+    float speed;
 
     private Vector3 rotateOnSink;
 
@@ -18,11 +19,11 @@ public class BoatBehavior : MonoBehaviour {
         rotateOnSink.x = Random.Range(-0.1f, 0.1f);
         rotateOnSink.y = Random.Range(-0.2f, 0.2f);
         rotateOnSink.z = Random.Range(-2, 2);
+        speed = Random.Range(GameBalance.Instance.shipMinSpeed, GameBalance.Instance.shipMaxSpeed);
     }
 
     void Update () {
         // move
-        float speed = Random.Range(GameBalance.Instance.shipMinSpeed, GameBalance.Instance.shipMaxSpeed);
         gameObject.GetComponent<Rigidbody2D>().velocity = new Vector2(0, -1*speed);
 
         // hit points? later
