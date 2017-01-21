@@ -19,7 +19,7 @@ public class ScoreData : MonoBehaviour {
 
     public int GetTime()
     {
-        int timeSurvived = GameBalance.Instance.Level_time - timePlayed;
+        int timeSurvived = GameBalance.Instance.Level_time - timePlayed - 1;
         return timeSurvived;
     }
 
