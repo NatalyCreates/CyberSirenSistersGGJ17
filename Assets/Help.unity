@@ -291,13 +291,14 @@ MonoBehaviour:
   m_Text: '<size=54>How to play</size>
 
 
-    tap the [Tab] or [Enter] keys in rhythm to generate either <color=blue>blue (slow)</color>,
-    <color=yellow>yellow (medium)</color> or <color=red>red (fast) waves</color>.
+    Tap the [Tab] (left siren) or [Enter] (right siren) keys at a constant pace to
+    generate either <color=blue>blue (slow pace )</color>, <color=yellow>yellow (medium
+    pace)</color> or <color=red>red (fast pace) waves</color>.
 
 
     Ships have to be hit simulatenously by waves in their corrosponding colors to
     be sunk. Coordinate with the other player to sink all ships before they reach
-    the shore.
+    the shore and survive until the timer runs out.
 
 '
 --- !u!222 &1414005014
