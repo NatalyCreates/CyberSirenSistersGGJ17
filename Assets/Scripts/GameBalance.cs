@@ -56,8 +56,8 @@ public class GameBalance : MonoBehaviour {
         shipRateMin = 1f;
         shipRateMax = 5f;
 
-        shipMinXPos = -1000;
-        shipMaxXPos = 1000;
+        shipMinXPos = -550;
+        shipMaxXPos = 550;
 
         shipMinSpeed = 25;
         shipMaxSpeed = 75;
