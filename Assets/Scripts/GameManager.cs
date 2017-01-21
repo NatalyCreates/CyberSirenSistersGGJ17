@@ -93,6 +93,6 @@ public class GameManager : MonoBehaviour {
 
     public void LoseGame()
     {
-        Debug.Log("LOSER");
+        SceneManager.LoadScene("Lost");
     }
 }
