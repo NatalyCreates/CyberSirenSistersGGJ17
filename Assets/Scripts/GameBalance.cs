@@ -32,6 +32,9 @@ public class GameBalance : MonoBehaviour {
     public double raiseLambda;
     public double decayLambda;
 
+    public KeyCode[] leftPlayerKeys;
+    public KeyCode[] rightPlayerKeys;
+
     public struct FreqRange
     {
         public FreqRange(float startF, float endF)
@@ -82,6 +85,11 @@ public class GameBalance : MonoBehaviour {
         frequencyThresholdsByColor[FreqColor.Blue] = 0.3f;
         frequencyThresholdsByColor[FreqColor.Yellow] = 1.6f;
         frequencyThresholdsByColor[FreqColor.Red] = 3.8f;
+
+        leftPlayerKeys = new KeyCode[] { KeyCode.Tab, KeyCode.Joystick1Button0, KeyCode.Joystick1Button1,
+            KeyCode.Joystick1Button2, KeyCode.Joystick1Button3};
+        rightPlayerKeys = new KeyCode[] { KeyCode.Return, KeyCode.Joystick2Button0, KeyCode.Joystick2Button1,
+            KeyCode.Joystick2Button2, KeyCode.Joystick2Button3};
     }
 
     public FreqColor GetColor(float freq)
