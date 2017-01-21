@@ -19,7 +19,6 @@ public class MusicManager : MonoBehaviour {
         }
 
         sources[0].volume = 1f;
-        sources[1].volume = 1f;
 
 
         //gameObject.GetComponent<AudioSource>();
@@ -42,17 +41,24 @@ public class MusicManager : MonoBehaviour {
         if (coloredPair[0] == GameBalance.FreqColor.White)
         {
             sources[0].volume = 1f;
+            sources[1].volume = 0f;
+            sources[2].volume = 0f;
+            sources[3].volume = 0f;
+            sources[4].volume = 0f;
+            sources[5].volume = 0f;
+            sources[6].volume = 0f;
+        }
+        else if (coloredPair[0] == GameBalance.FreqColor.Blue)
+        {
+            sources[0].volume = 1f;
             sources[1].volume = 1f;
             sources[2].volume = 0f;
             sources[3].volume = 0f;
             sources[4].volume = 0f;
             sources[5].volume = 0f;
             sources[6].volume = 0f;
-            sources[7].volume = 0f;
-            sources[8].volume = 0f;
-            sources[9].volume = 0f;
         }
-        else if (coloredPair[0] == GameBalance.FreqColor.Blue)
+        else if ((coloredPair[0] == GameBalance.FreqColor.Yellow) && (coloredPair[1] <= GameBalance.FreqColor.Blue))
         {
             sources[0].volume = 1f;
             sources[1].volume = 1f;
@@ -61,11 +67,8 @@ public class MusicManager : MonoBehaviour {
             sources[4].volume = 0f;
             sources[5].volume = 0f;
             sources[6].volume = 0f;
-            sources[7].volume = 0f;
-            sources[8].volume = 0f;
-            sources[9].volume = 0f;
         }
-        else if ((coloredPair[0] == GameBalance.FreqColor.Yellow) && (coloredPair[1] <= GameBalance.FreqColor.Blue))
+        else if ((coloredPair[0] == GameBalance.FreqColor.Yellow) && (coloredPair[1] == GameBalance.FreqColor.Yellow))
         {
             sources[0].volume = 1f;
             sources[1].volume = 1f;
@@ -74,22 +77,6 @@ public class MusicManager : MonoBehaviour {
             sources[4].volume = 0f;
             sources[5].volume = 0f;
             sources[6].volume = 0f;
-            sources[7].volume = 0f;
-            sources[8].volume = 0f;
-            sources[9].volume = 0f;
-        }
-        else if ((coloredPair[0] == GameBalance.FreqColor.Yellow) && (coloredPair[1] == GameBalance.FreqColor.Yellow))
-        {
-            sources[0].volume = 1f;
-            sources[1].volume = 1f;
-            sources[2].volume = 0f;
-            sources[3].volume = 0f;
-            sources[4].volume = 1f;
-            sources[5].volume = 1f;
-            sources[6].volume = 0f;
-            sources[7].volume = 0f;
-            sources[8].volume = 0f;
-            sources[9].volume = 0f;
         }
         else if ((coloredPair[0] == GameBalance.FreqColor.Red) && (coloredPair[1] <= GameBalance.FreqColor.Blue))
         {
@@ -97,38 +84,29 @@ public class MusicManager : MonoBehaviour {
             sources[1].volume = 1f;
             sources[2].volume = 0f;
             sources[3].volume = 0f;
-            sources[4].volume = 0f;
+            sources[4].volume = 1f;
             sources[5].volume = 0f;
-            sources[6].volume = 1f;
-            sources[7].volume = 0f;
-            sources[8].volume = 0f;
-            sources[9].volume = 0f;
+            sources[6].volume = 0f;
         }
         else if ((coloredPair[0] == GameBalance.FreqColor.Red) && (coloredPair[1] <= GameBalance.FreqColor.Yellow))
         {
             sources[0].volume = 1f;
-            sources[1].volume = 1f;
+            sources[1].volume = 0f;
             sources[2].volume = 0f;
             sources[3].volume = 0f;
             sources[4].volume = 0f;
-            sources[5].volume = 0f;
+            sources[5].volume = 1f;
             sources[6].volume = 0f;
-            sources[7].volume = 1f;
-            sources[8].volume = 0f;
-            sources[9].volume = 0f;
         }
         else if ((coloredPair[0] == GameBalance.FreqColor.Red) && (coloredPair[1] == GameBalance.FreqColor.Red))
         {
             sources[0].volume = 1f;
-            sources[1].volume = 1f;
+            sources[1].volume = 0f;
             sources[2].volume = 0f;
             sources[3].volume = 0f;
             sources[4].volume = 0f;
             sources[5].volume = 0f;
-            sources[6].volume = 0f;
-            sources[7].volume = 0f;
-            sources[8].volume = 1f;
-            sources[9].volume = 1f;
+            sources[6].volume = 1f;
         }
     }
 
