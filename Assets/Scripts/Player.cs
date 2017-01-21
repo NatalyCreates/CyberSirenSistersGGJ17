@@ -39,7 +39,8 @@ public class Player : MonoBehaviour
     void CreateWave()
     {
         GameBalance.FreqColor color = GetCurrentWave();
-        GameObject wave = Instantiate(wavePrefab, this.transform.position, Quaternion.identity);
+        Vector3 start = this.name == "SirenLeft" ? new Vector3(150, 150, 0) : new Vector3(-150, 150, 0);
+        GameObject wave = Instantiate(wavePrefab, start, Quaternion.identity);
         wave.GetComponent<WaveBehavior>().waveColor = color;
     }
 
