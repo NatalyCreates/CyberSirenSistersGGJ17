@@ -45,3 +45,24 @@ TagManager:
   - name: Default
     uniqueID: 0
     locked: 0
+  - name: Water
+    uniqueID: 1989002439
+    locked: 0
+  - name: Waves
+    uniqueID: 3585168725
+    locked: 0
+  - name: Ships
+    uniqueID: 4053228775
+    locked: 0
+  - name: Rocks
+    uniqueID: 3627794615
+    locked: 0
+  - name: Sirens
+    uniqueID: 3523283421
+    locked: 0
+  - name: Bar
+    uniqueID: 1693468393
+    locked: 0
+  - name: UI
+    uniqueID: 3468677895
+    locked: 0
