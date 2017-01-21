@@ -35,6 +35,9 @@ public class BoatBehavior : MonoBehaviour {
             // sink
             // animate
             // kill ship
+
+            MusicManager.Instance.PlaySunkShipEffect();
+
             AnimateSinking();
             if (!scoreUpdated)
             {
