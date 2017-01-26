@@ -26,8 +26,12 @@ public class MenuBehavior : MonoBehaviour {
     }
 
     public void Exit () {
-		PushButton(GameObject.Find("ExitButton"));
+#if UNITY_WEBGL
+        // do nothing
+#else
+        PushButton(GameObject.Find("ExitButton"));
         Application.Quit();
+#endif
     }
 
 	void PushButton(GameObject button) {
